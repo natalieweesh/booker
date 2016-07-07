@@ -24,7 +24,11 @@ STUDIOS = {"cityrow": "cityrow-new-york",
            "throwback": "throwback-fitness-new-york",
            "uplift": "uplift-studios-new-york",
            "swerve": "swerve-fitness-flatiron-new-york",
-           "peloton": "peloton-chelsea-new-york"}
+           "peloton": "peloton-chelsea-new-york",
+           "fhittingroom": "the-fhitting-room-flatiron-new-york",
+           "barrys": "barrys-bootcamp-chelsea-new-york",
+           "xtendbarre": "xtend-barre-brooklyn-heights",
+           "y7": "y7-studio-flatiron-new-york"}
 
 def nao(): #what time is it?
     return datetime.datetime.now()
