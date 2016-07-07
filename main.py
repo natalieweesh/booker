@@ -8,7 +8,11 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 
 '''
-This is a python script you can run a couple minutes before 12pm a week before the impossible-to-book-classpass-class you want so that you have a fighting chance to book it. It will ask for the studio you want and the start time of the class you want. Start the script a minute or two before 12pm so it has time to log in and load the studio page before clicking reserve.
+This is a python script you can run a couple minutes before 12pm a week before
+the impossible-to-book-classpass-class you want so that you have a fighting
+chance to book it. It will ask for the studio you want and the start time of
+the class you want. Start the script a minute or two before 12pm so it has time
+to log in and load the studio page before clicking reserve.
 '''
 
 #the most impossible to book studios
