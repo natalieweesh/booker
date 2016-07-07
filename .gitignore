@@ -1,0 +1,3 @@
+config.py
+patch_readline_issue_18458.sh
+*.pyc
