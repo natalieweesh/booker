@@ -13,20 +13,20 @@ This is a python script you can run a couple minutes before 12pm a week before t
 
 #the most impossible to book studios
 STUDIOS = {"cityrow": "cityrow-new-york", 
-					 "tonehouse": "tone-house-new-york",
-					 "brooklynbodyburn": "brooklyn-bodyburn-cobble-hill",
-					 "modo": "modo-yoga-nyc-west-village-new-york",
-					 "mkc": "mkc-new-york",
-					 "throwback": "throwback-fitness-new-york",
-					 "uplift": "uplift-studios-new-york",
-					 "swerve": "swerve-fitness-flatiron-new-york",
-					 "peloton": "peloton-chelsea-new-york"}
+           "tonehouse": "tone-house-new-york",
+           "brooklynbodyburn": "brooklyn-bodyburn-cobble-hill",
+           "modo": "modo-yoga-nyc-west-village-new-york",
+           "mkc": "mkc-new-york",
+           "throwback": "throwback-fitness-new-york",
+           "uplift": "uplift-studios-new-york",
+           "swerve": "swerve-fitness-flatiron-new-york",
+           "peloton": "peloton-chelsea-new-york"}
 
 def nao(): #what time is it?
-	return datetime.datetime.now()
+    return datetime.datetime.now()
 
 def timestamp(text): #print with timestamp
-	print text + " {}".format(nao())
+    print text + " {}".format(nao())
 
 print "Which studio do you want to book?"
 print "studio suggestions: {}".format(STUDIOS.keys())
@@ -48,11 +48,11 @@ passwordInput.send_keys(config.credentials["password"])
 passwordInput.submit()
 
 try:
-	#wait until dashboard loads
-	WebDriverWait(driver, 30).until(EC.title_contains("ClassPass | Dashboard"))
-	timestamp("Logged in")
+    #wait until dashboard loads
+    WebDriverWait(driver, 30).until(EC.title_contains("ClassPass | Dashboard"))
+    timestamp("Logged in")
 except:
-	timestamp("Failed to login")
+    timestamp("Failed to login")
 
 #load studio page
 driver.get("http://classpass.com/studios/{}".format(selectedStudioUrl))
@@ -60,9 +60,9 @@ driver.get("http://classpass.com/studios/{}".format(selectedStudioUrl))
 #wait until 12pm
 t = datetime.datetime.now()
 while t.hour < 12:
-	time.sleep(1)
-	t = datetime.datetime.now()
-	timestamp("Wait for it...")
+    time.sleep(1)
+    t = datetime.datetime.now()
+    timestamp("Wait for it...")
 
 #might have to refresh before clicking the next button...not sure yet
 
